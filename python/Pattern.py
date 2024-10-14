@@ -77,6 +77,20 @@ class Pattern:
                 print("*", end=" ")
             print()
                  
+    def printInverseTriangularNumbers(self,number:int)->None:
+        """
+        Prints an inverse triangular number pattern of size nxn.
+        
+        Parameters:
+        number (int): The size of the square matrix. Must be a positive integer.
+        
+        Returns:
+        None: The function does not return any value. It prints the number pattern directly.
+        """
+        for i in range(number, 0, -1):
+            for j in range(1, i + 1):
+                print(j, end=" ")
+            print()
 
 
             
@@ -88,8 +102,8 @@ def main():
     # pattern.printTriangularStarPattern(number)
     # pattern.printTriangularNumberPattern(number)
     # pattern.printTriangularNumberPattern2(number)
-    pattern.printInverseTriangularstar(number)
-    
+    # pattern.printInverseTriangularstar(number)
+    pattern.printInverseTriangularNumbers(number)
 
 
 if __name__ == "__main__":

@@ -58,6 +58,15 @@ void printInverseTriangularStar(int n){
         cout << endl;
     }
 }
+
+void printInverseTriangularNumber(int x){
+    for (int i=x;i>=1;i--){
+        for (int j=1;j<=i;j++){
+            cout << j << " ";
+        }
+        cout << endl;
+    }
+}
 int main() {
     int n;
     cout << "Enter the value of n: ";
@@ -66,6 +75,7 @@ int main() {
     // printTriangularStarPattern(n);
     // printTriangularNumberPattern(n);
     // printTriangularNumberPattern2(n);
-    printInverseTriangularStar(n);
+    // printInverseTriangularStar(n);
+    printInverseTriangularNumber(n);
     return 0;
 }
