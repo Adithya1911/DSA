@@ -92,7 +92,19 @@ class Pattern:
                 print(j, end=" ")
             print()
 
-
+    def printTriangularPyramid(self,number:int)->None:
+        """
+        Prints a triangular pyramid pattern of size nxn.
+        
+        Parameters:
+        number (int): The size of the square matrix. Must be a positive integer.
+        
+        Returns:
+        None: The function does not return any value. It prints the star pattern directly.
+        """
+        for i in range(number, 0, -1):
+           print(" "*i,end="")
+           print("*"*(2*(number-i)+1))
             
             
 def main():
@@ -103,7 +115,8 @@ def main():
     # pattern.printTriangularNumberPattern(number)
     # pattern.printTriangularNumberPattern2(number)
     # pattern.printInverseTriangularstar(number)
-    pattern.printInverseTriangularNumbers(number)
+    # pattern.printInverseTriangularNumbers(number)
+    pattern.printTriangularPyramid(number)
 
 
 if __name__ == "__main__":

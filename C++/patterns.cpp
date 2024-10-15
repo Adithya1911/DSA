@@ -67,6 +67,51 @@ void printInverseTriangularNumber(int x){
         cout << endl;
     }
 }
+
+void printTriangularPiramid(int x){
+    for(int i=x;i>=1;i--){
+        for(int j=1;j<i;j++){
+            cout << " ";
+        }
+        for(int j=2*(x-i)+1;j>0;j--){
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
+
+void printInvertedTriangularPiramid(int x){
+    for(int i=1;i<=x;i++){
+        for(int j=1;j<i;j++){
+            cout << " ";
+        }
+        for(int j=2*(x-i)+1;j>0;j--){
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
+
+void printNStarPattern(int x){
+    for(int i=x;i>=1;i--){
+        for(int j=1;j<i;j++){
+            cout << " ";
+        }
+        for(int j=2*(x-i)+1;j>0;j--){
+            cout << "*";
+        }
+        cout << endl;
+    }
+    for(int i=1;i<=x;i++){
+        for(int j=1;j<i;j++){
+            cout << " ";
+        }
+        for(int j=2*(x-i)+1;j>0;j--){
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
 int main() {
     int n;
     cout << "Enter the value of n: ";
@@ -76,6 +121,9 @@ int main() {
     // printTriangularNumberPattern(n);
     // printTriangularNumberPattern2(n);
     // printInverseTriangularStar(n);
-    printInverseTriangularNumber(n);
+    // printInverseTriangularNumber(n);
+    // printTriangularPiramid(n);
+    // printInvertedTriangularPiramid(n);
+    printNStarPattern(n);
     return 0;
 }
