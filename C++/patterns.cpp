@@ -3,6 +3,7 @@
 
 #include<iostream>
 #include<bits/stdc++.h>
+#include<string>
 using namespace std;
 
 void printRectangularStarPattern(int n) {
@@ -113,9 +114,9 @@ void printNStarPattern(int x){
     }
 }
 int main() {
-    int n;
-    cout << "Enter the value of n: ";
-    cin >> n;
+    // int n;
+    // cout << "Enter the value of n: ";
+    // cin >> n;
     // printRectangularStarPattern(n);
     // printTriangularStarPattern(n);
     // printTriangularNumberPattern(n);
@@ -124,6 +125,17 @@ int main() {
     // printInverseTriangularNumber(n);
     // printTriangularPiramid(n);
     // printInvertedTriangularPiramid(n);
-    printNStarPattern(n);
+    // printNStarPattern(n);
+    string str;
+    cout << "Enter a string: ";
+    // cin.ignore();
+    getline(cin, str);
+    for(int i=0;i<str.size();i++){
+        cout << str[i] << endl;
+    }
+    cout<<endl;
+    cout<<endl;
+    cout<<str[-5]<<endl;
+    cout << "Entered string: " << str << endl;
     return 0;
 }
