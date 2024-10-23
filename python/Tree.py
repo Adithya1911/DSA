@@ -25,8 +25,6 @@ def depth_first_Traversal(node: TreeNode) -> list[str]:
     return []
 
 
-# res:list[str]=depth_first_Traversal(a)
-# print(res) # ['A', 'B', 'D', 'E', 'C', 'F']
 
 def breadth_first_Traversal(node: TreeNode) -> list[str]:
     """
@@ -54,8 +52,6 @@ def breadth_first_Traversal(node: TreeNode) -> list[str]:
             queue.append(newNode.right_child)
     return result
 
-# res:list[str]=breadth_first_Traversal(a)
-# print(res)# A B C D E F
 
 def depth_first_search(root:TreeNode,target_value:str)->bool:
     """
@@ -81,7 +77,7 @@ def depth_first_search(root:TreeNode,target_value:str)->bool:
         return left_search or right_search
     return False
 
-# print(depth_first_search(a, "J")) # True
+
 
 def breadth_first_search(root:TreeNode,target_value:str)->bool:
     """
@@ -108,7 +104,7 @@ def breadth_first_search(root:TreeNode,target_value:str)->bool:
             if current_node.right_child:queue.append(current_node.right_child)
     return False
 
-# print(breadth_first_search(a, "E")) # False
+
 
 def tree_sum(root:TreeNode)->int:
     """
@@ -188,6 +184,26 @@ def tree_pre_order_traversal(root: TreeNode) -> list[str]:
         return [root.data] + tree_pre_order_traversal(root.left_child) + tree_pre_order_traversal(root.right_child)
     return []
 
+def tree_height(root:TreeNode)->int:
+    """
+    Calculate the height of a binary tree.
+
+    Parameters:
+    root (TreeNode): The root node of the binary tree to calculate the height of.
+        The TreeNode class should have the following attributes:
+        - data: The data stored in the node.
+        - left_child: The left child node.
+        - right_child: The right child node.
+
+    Returns:
+    int: The height of the binary tree.
+    """
+    if root:
+        left_height:int=tree_height(root.left_child)
+        right_height:int=tree_height(root.right_child)
+        return max(left_height,right_height)+1
+    return 0
+
 
 def main():
     # Intializing the tree nodes    
@@ -205,15 +221,16 @@ def main():
     b.right_child=e    #         / \   \    
     c.right_child=f    #        d   e   f
     
-    print(f'Depth First Traversal: {depth_first_Traversal(a)}')
-    print(f'Breadth First Traversal: {breadth_first_Traversal(a)}')
-    print(f'Depth First Search of J in Tree: {depth_first_search(a,"J")}')
-    print(f'Breadth First Search of E in Tree: {breadth_first_search(a,"E")}')
-    print(f'Tree Sum of Tree: {tree_sum(a)}')
-    print(f'Inorder Traversal: {tree_inorder_traversal(a)}')
-    print(f'Postorder Traversal: {tree_post_order_traversal(a)}')
-    print(f'Preorder Traversal: {tree_pre_order_traversal(a)}')
+    # print(f'Depth First Traversal: {depth_first_Traversal(a)}')
+    # print(f'Breadth First Traversal: {breadth_first_Traversal(a)}')
+    # print(f'Depth First Search of J in Tree: {depth_first_search(a,"J")}')
+    # print(f'Breadth First Search of E in Tree: {breadth_first_search(a,"E")}')
+    # print(f'Tree Sum of Tree: {tree_sum(a)}')
+    # print(f'Inorder Traversal: {tree_inorder_traversal(a)}')
+    # print(f'Postorder Traversal: {tree_post_order_traversal(a)}')
+    # print(f'Preorder Traversal: {tree_pre_order_traversal(a)}')
     
+    print(f'The height of Tree: {tree_height(a)}')
 
 
 if __name__ == "__main__":
